@@ -49,17 +49,18 @@ namespace CapaVista
             // btnconsultar
             // 
             this.btnconsultar.Location = new System.Drawing.Point(587, 48);
-            this.btnconsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnconsultar.Margin = new System.Windows.Forms.Padding(2);
             this.btnconsultar.Name = "btnconsultar";
             this.btnconsultar.Size = new System.Drawing.Size(136, 96);
             this.btnconsultar.TabIndex = 27;
             this.btnconsultar.Text = "Consultar";
             this.btnconsultar.UseVisualStyleBackColor = true;
+            this.btnconsultar.Click += new System.EventHandler(this.btnconsultar_Click);
             // 
             // btneliminar
             // 
             this.btneliminar.Location = new System.Drawing.Point(464, 114);
-            this.btneliminar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btneliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btneliminar.Name = "btneliminar";
             this.btneliminar.Size = new System.Drawing.Size(112, 30);
             this.btneliminar.TabIndex = 26;
@@ -69,7 +70,7 @@ namespace CapaVista
             // btnactualizar
             // 
             this.btnactualizar.Location = new System.Drawing.Point(464, 79);
-            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnactualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnactualizar.Name = "btnactualizar";
             this.btnactualizar.Size = new System.Drawing.Size(112, 30);
             this.btnactualizar.TabIndex = 25;
@@ -79,7 +80,7 @@ namespace CapaVista
             // btnguardar
             // 
             this.btnguardar.Location = new System.Drawing.Point(464, 46);
-            this.btnguardar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnguardar.Margin = new System.Windows.Forms.Padding(2);
             this.btnguardar.Name = "btnguardar";
             this.btnguardar.Size = new System.Drawing.Size(112, 30);
             this.btnguardar.TabIndex = 24;
@@ -91,7 +92,7 @@ namespace CapaVista
             // 
             this.cbestado.FormattingEnabled = true;
             this.cbestado.Location = new System.Drawing.Point(132, 119);
-            this.cbestado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbestado.Margin = new System.Windows.Forms.Padding(2);
             this.cbestado.Name = "cbestado";
             this.cbestado.Size = new System.Drawing.Size(279, 21);
             this.cbestado.TabIndex = 23;
@@ -99,7 +100,7 @@ namespace CapaVista
             // txtdepto
             // 
             this.txtdepto.Location = new System.Drawing.Point(132, 95);
-            this.txtdepto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtdepto.Margin = new System.Windows.Forms.Padding(2);
             this.txtdepto.Name = "txtdepto";
             this.txtdepto.Size = new System.Drawing.Size(279, 20);
             this.txtdepto.TabIndex = 22;
@@ -107,7 +108,7 @@ namespace CapaVista
             // txtpuesto
             // 
             this.txtpuesto.Location = new System.Drawing.Point(132, 71);
-            this.txtpuesto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtpuesto.Margin = new System.Windows.Forms.Padding(2);
             this.txtpuesto.Name = "txtpuesto";
             this.txtpuesto.Size = new System.Drawing.Size(279, 20);
             this.txtpuesto.TabIndex = 21;
@@ -115,7 +116,7 @@ namespace CapaVista
             // txtnombre
             // 
             this.txtnombre.Location = new System.Drawing.Point(132, 46);
-            this.txtnombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtnombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(279, 20);
             this.txtnombre.TabIndex = 20;
@@ -127,7 +128,7 @@ namespace CapaVista
             this.dgv1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv1.Location = new System.Drawing.Point(9, 160);
-            this.dgv1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgv1.Margin = new System.Windows.Forms.Padding(2);
             this.dgv1.Name = "dgv1";
             this.dgv1.ReadOnly = true;
             this.dgv1.RowHeadersWidth = 51;
@@ -207,7 +208,7 @@ namespace CapaVista
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "CRUD";
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
