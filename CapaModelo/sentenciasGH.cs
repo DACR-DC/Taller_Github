@@ -32,5 +32,12 @@ namespace CapaModelo
             OdbcCommand cmd = new OdbcCommand(query, con.conexion());
             cmd.ExecuteNonQuery();
         }
+
+        public void actualizarEmpleado(string nombre_completo, string puesto, string departamento, int estado)
+        {
+            string query = $"UPDATE empleados SET Puesto = '{puesto}', Departamento = '{departamento}', Estado = '{estado}' WHERE nombre_completo = '{nombre_completo}'";
+            OdbcCommand cmd = new OdbcCommand(query, con.conexion());
+            cmd.ExecuteNonQuery();
+        }
     }
 }
