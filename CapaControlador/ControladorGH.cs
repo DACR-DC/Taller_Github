@@ -30,5 +30,12 @@ namespace CapaControlador
             sentenciasGH sn = new sentenciasGH();
             sn.eliminarEmpleado(nombre_completo);
         }
+
+        public void ActualizarEmpleado(string nombre_completo, string puesto, string departamento, int estado)
+        {
+            sentenciasGH sn = new sentenciasGH();
+            sn.actualizarEmpleado(nombre_completo, puesto, departamento, estado);
+        }
+
     }
 }

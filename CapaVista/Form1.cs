@@ -85,5 +85,33 @@ namespace CapaVista
         {
 
         }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbestado.SelectedItem != null)
+                {
+                    string nombre_completo = txtnombre.Text;
+                    string puesto = txtpuesto.Text;
+                    string departamento = txtdepto.Text;
+
+                    var kvp = (KeyValuePair<string, int>)cbestado.SelectedItem;
+                    int estado = kvp.Value;
+
+                    cn.ActualizarEmpleado(nombre_completo, puesto, departamento, estado);
+
+                    MessageBox.Show("Empleado guardado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un estado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar el empleado: {ex.Message}");
+            }
+        }
     }
 }
