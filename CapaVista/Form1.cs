@@ -56,6 +56,7 @@ namespace CapaVista
                     cn.GuardarEmpleado(nombre_completo, puesto, departamento, estado);
 
                     MessageBox.Show("Empleado guardado exitosamente");
+                    actualizardatagriew();
                 }
                 else
                 {
@@ -79,6 +80,7 @@ namespace CapaVista
 
             cn.EliminarEmpleado(nombre);
             MessageBox.Show("Empleado eliminado exitosamente");
+            actualizardatagriew();
         }
 
         private void cbestado_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,6 +104,7 @@ namespace CapaVista
                     cn.ActualizarEmpleado(nombre_completo, puesto, departamento, estado);
 
                     MessageBox.Show("Empleado guardado exitosamente");
+                    actualizardatagriew();
                 }
                 else
                 {
@@ -112,6 +115,11 @@ namespace CapaVista
             {
                 MessageBox.Show($"Error al guardar el empleado: {ex.Message}");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            actualizardatagriew();
         }
     }
 }
