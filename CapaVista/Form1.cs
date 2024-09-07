@@ -7,14 +7,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaControlador;
 
 namespace CapaVista
 {
     public partial class Form1 : Form
     {
+        ControladorGH cn = new CapaControlador.ControladorGH();
+        string emp = "empleados";
+
         public Form1()
         {
             InitializeComponent();
+            cbestado.Items.Add(new KeyValuePair<string, int>("Activo", 1));
+            cbestado.Items.Add(new KeyValuePair<string, int>("Inactivo", 0));
+            cbestado.DisplayMember = "Key";
+            cbestado.ValueMember = "Value";
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -25,6 +33,34 @@ namespace CapaVista
             txtpuesto.Text = row.Cells["puesto"].Value.ToString();
             txtdepto.Text = row.Cells["departamento"].Value.ToString();
             cbestado.SelectedItem = row.Cells["estado"].Value.ToString();
+        }
+
+        private void btnguardar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (cbestado.SelectedItem != null)
+                {
+                    string nombre_completo = txtnombre.Text;
+                    string puesto = txtpuesto.Text;
+                    string departamento = txtdepto.Text;
+
+                    var kvp = (KeyValuePair<string, int>)cbestado.SelectedItem;
+                    int estado = kvp.Value;
+
+                    cn.GuardarEmpleado(nombre_completo, puesto, departamento, estado);
+
+                    MessageBox.Show("Empleado guardado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione un estado.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al guardar el empleado: {ex.Message}");
+            }
         }
     }
 }
