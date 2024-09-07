@@ -34,6 +34,11 @@ namespace CapaVista
             txtdepto.Text = row.Cells["departamento"].Value.ToString();
             cbestado.SelectedItem = row.Cells["estado"].Value.ToString();
         }
+        public void actualizardatagriew()
+        {
+            DataTable dt = cn.llenarTbl(emp);
+            dgv1.DataSource = dt;
+        }
 
         private void btnguardar_Click(object sender, EventArgs e)
         {
@@ -61,6 +66,11 @@ namespace CapaVista
             {
                 MessageBox.Show($"Error al guardar el empleado: {ex.Message}");
             }
+        }
+
+        private void btnconsultar_Click(object sender, EventArgs e)
+        {
+            actualizardatagriew();
         }
     }
 }

@@ -4,15 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaModelo;
+using System.Data;
+using System.Data.Odbc;
 
 namespace CapaControlador
 {
     public class ControladorGH
     {
         sentenciasGH sn = new sentenciasGH();
+
         public void GuardarEmpleado(string nombre_completo, string puesto, string departamento, int estado)
         {
             sn.guardarEmpleado(nombre_completo, puesto, departamento, estado);
+        }
+
+        public DataTable llenarTbl(string tabla)
+        {
+            OdbcDataAdapter dt = sn.llenarTbl(tabla);
+            DataTable table = new DataTable();
+            dt.Fill(table);
+            return table;
         }
     }
 }
