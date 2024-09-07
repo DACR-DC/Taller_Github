@@ -25,5 +25,10 @@ namespace CapaControlador
             dt.Fill(table);
             return table;
         }
+        public void EliminarEmpleado(string nombre_completo)
+        {
+            sentenciasGH sn = new sentenciasGH();
+            sn.eliminarEmpleado(nombre_completo);
+        }
     }
 }

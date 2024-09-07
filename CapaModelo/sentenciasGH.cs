@@ -25,5 +25,12 @@ namespace CapaModelo
             OdbcDataAdapter dataTable = new OdbcDataAdapter(sql, con.conexion());
             return dataTable;
         }
+
+        public void eliminarEmpleado(string nombre_completo)
+        {
+            string query = $"DELETE FROM empleados WHERE nombre_completo = '{nombre_completo}'";
+            OdbcCommand cmd = new OdbcCommand(query, con.conexion());
+            cmd.ExecuteNonQuery();
+        }
     }
 }

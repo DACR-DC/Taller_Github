@@ -72,5 +72,18 @@ namespace CapaVista
         {
             actualizardatagriew();
         }
+
+        private void btneliminar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtnombre.Text;
+
+            cn.EliminarEmpleado(nombre);
+            MessageBox.Show("Empleado eliminado exitosamente");
+        }
+
+        private void cbestado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
