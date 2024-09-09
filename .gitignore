@@ -431,4 +431,10 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
-
+# Archivos creados por compilador de solución 'ProyectoConsulta'
+CapaControlador.dll
+CapaControlador.pdb
+CapaModelo.dll
+CapaModelo.pdb
+CapaVista.dll
+CapaVista.pdb

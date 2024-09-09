@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CapaModelo;
 using System.Data.Odbc;
 using System.Data;
+//using System.Data.SqlClient; // Asegúrate de importar esto si usas SqlConnection  
 
 namespace CapaControlador
 {
@@ -22,20 +23,33 @@ namespace CapaControlador
         }
 
 
-        public void saveEmpleado(int codigo, string nombre, string puesto, string departamento,int estado)
+        public void saveEmpleado(int id_empleado, string nombre, string apellido, int edad, string puesto, string sexo, int estado)
         {
-
-            sn.guardar(codigo, nombre, puesto, departamento, estado);
+            sn.guardar(id_empleado, nombre, puesto, apellido, edad, sexo, estado);
         }
 
         public void eliminar(int llave)
         {
-            sn.eliminar(llave);
+            // Establece la conexión a la base de datos usando ODBC  
+            using (OdbcConnection connection = new OdbcConnection("Dsn=ventasemp"))
+            {
+                connection.Open();
+                string query = "DELETE FROM empleados WHERE id_empleado = ?"; // Usa '?' como marcador de posición para parámetros  
+
+                using (OdbcCommand command = new OdbcCommand(query, connection))
+                {
+                    // Usamos un parámetro para evitar inyección SQL  
+                    command.Parameters.AddWithValue("?", llave); // Agrega el parámetro  
+                    command.ExecuteNonQuery();
+                }
+            }
         }
 
-        public void modificar(int id, string n, string p, string d, int es)
+        public void modificar(int id_empleado, string nombre, string apellido, int edad, string puesto, string sexo, int estado)
         {
-            this.sn.modificar(id,n,p,d,es);
+            // Llamar al método modificar de la capa de datos con id_empleado
+            sn.modificar(id_empleado, nombre, puesto, apellido, edad, sexo, estado);
         }
+
     }
 }

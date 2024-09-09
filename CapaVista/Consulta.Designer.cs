@@ -36,15 +36,18 @@ namespace CapaVista
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_estado = new System.Windows.Forms.TextBox();
             this.txt_puesto = new System.Windows.Forms.TextBox();
-            this.txt_departamento = new System.Windows.Forms.TextBox();
+            this.txt_sexo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_eliminar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.txt_apellido = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txt_edad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +67,7 @@ namespace CapaVista
             this.BtnConsulta.Location = new System.Drawing.Point(386, 70);
             this.BtnConsulta.Name = "BtnConsulta";
             this.BtnConsulta.Size = new System.Drawing.Size(100, 44);
-            this.BtnConsulta.TabIndex = 1;
+            this.BtnConsulta.TabIndex = 15;
             this.BtnConsulta.Text = "Consulta";
             this.BtnConsulta.UseVisualStyleBackColor = true;
             this.BtnConsulta.Click += new System.EventHandler(this.BtnConsulta_Click);
@@ -75,139 +78,163 @@ namespace CapaVista
             this.btn_ingresar.Location = new System.Drawing.Point(516, 70);
             this.btn_ingresar.Name = "btn_ingresar";
             this.btn_ingresar.Size = new System.Drawing.Size(100, 44);
-            this.btn_ingresar.TabIndex = 2;
+            this.btn_ingresar.TabIndex = 16;
             this.btn_ingresar.Text = "Ingresar";
             this.btn_ingresar.UseVisualStyleBackColor = true;
             this.btn_ingresar.Click += new System.EventHandler(this.btn_ingresar_Click);
             // 
             // txt_codigo
             // 
-            this.txt_codigo.Location = new System.Drawing.Point(130, 41);
+            this.txt_codigo.Location = new System.Drawing.Point(138, 41);
             this.txt_codigo.Name = "txt_codigo";
             this.txt_codigo.Size = new System.Drawing.Size(180, 20);
-            this.txt_codigo.TabIndex = 3;
+            this.txt_codigo.TabIndex = 2;
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(130, 86);
+            this.txt_nombre.Location = new System.Drawing.Point(138, 101);
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(180, 20);
-            this.txt_nombre.TabIndex = 4;
+            this.txt_nombre.TabIndex = 6;
             // 
             // txt_estado
             // 
-            this.txt_estado.Location = new System.Drawing.Point(130, 218);
+            this.txt_estado.Location = new System.Drawing.Point(138, 225);
             this.txt_estado.Name = "txt_estado";
             this.txt_estado.Size = new System.Drawing.Size(180, 20);
-            this.txt_estado.TabIndex = 5;
+            this.txt_estado.TabIndex = 14;
             // 
             // txt_puesto
             // 
-            this.txt_puesto.Location = new System.Drawing.Point(130, 124);
+            this.txt_puesto.Location = new System.Drawing.Point(138, 70);
             this.txt_puesto.Name = "txt_puesto";
             this.txt_puesto.Size = new System.Drawing.Size(180, 20);
-            this.txt_puesto.TabIndex = 5;
+            this.txt_puesto.TabIndex = 4;
             // 
-            // txt_departamento
+            // txt_sexo
             // 
-            this.txt_departamento.Location = new System.Drawing.Point(130, 175);
-            this.txt_departamento.Name = "txt_departamento";
-            this.txt_departamento.Size = new System.Drawing.Size(180, 20);
-            this.txt_departamento.TabIndex = 6;
+            this.txt_sexo.Location = new System.Drawing.Point(138, 193);
+            this.txt_sexo.Name = "txt_sexo";
+            this.txt_sexo.Size = new System.Drawing.Size(180, 20);
+            this.txt_sexo.TabIndex = 12;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 41);
+            this.label1.Location = new System.Drawing.Point(38, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 13);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "COD";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "COD de empleado";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(38, 86);
+            this.label2.Location = new System.Drawing.Point(38, 104);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 5;
             this.label2.Text = "Nombre";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(38, 131);
+            this.label3.Location = new System.Drawing.Point(38, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 9;
+            this.label3.TabIndex = 3;
             this.label3.Text = "Puesto";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(42, 178);
+            this.label4.Location = new System.Drawing.Point(39, 196);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Depa";
+            this.label4.Size = new System.Drawing.Size(31, 13);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Sexo";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(42, 221);
+            this.label5.Location = new System.Drawing.Point(39, 228);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
-            this.label5.TabIndex = 11;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Estado";
             // 
-            // button1
+            // btn_eliminar
             // 
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(639, 70);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 44);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Refrescar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_eliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Location = new System.Drawing.Point(386, 131);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(100, 44);
+            this.btn_eliminar.TabIndex = 18;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button2
+            // btn_modificar
             // 
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(386, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 44);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.Location = new System.Drawing.Point(516, 131);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(100, 44);
+            this.btn_modificar.TabIndex = 19;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
+            this.btn_modificar.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button3
+            // txt_apellido
             // 
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(516, 131);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 44);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.txt_apellido.Location = new System.Drawing.Point(138, 131);
+            this.txt_apellido.Name = "txt_apellido";
+            this.txt_apellido.Size = new System.Drawing.Size(180, 20);
+            this.txt_apellido.TabIndex = 8;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(38, 134);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Apellido";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(38, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Edad";
+            // 
+            // txt_edad
+            // 
+            this.txt_edad.Location = new System.Drawing.Point(138, 163);
+            this.txt_edad.Name = "txt_edad";
+            this.txt_edad.Size = new System.Drawing.Size(180, 20);
+            this.txt_edad.TabIndex = 10;
             // 
             // Consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(858, 450);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txt_edad);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txt_apellido);
+            this.Controls.Add(this.btn_modificar);
+            this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txt_departamento);
+            this.Controls.Add(this.txt_sexo);
             this.Controls.Add(this.txt_puesto);
             this.Controls.Add(this.txt_estado);
             this.Controls.Add(this.txt_nombre);
@@ -217,6 +244,7 @@ namespace CapaVista
             this.Controls.Add(this.Dgv_consulta);
             this.Name = "Consulta";
             this.Text = "Consulta";
+            this.Load += new System.EventHandler(this.Consulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_consulta)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,14 +260,17 @@ namespace CapaVista
         private System.Windows.Forms.TextBox txt_nombre;
         private System.Windows.Forms.TextBox txt_estado;
         private System.Windows.Forms.TextBox txt_puesto;
-        private System.Windows.Forms.TextBox txt_departamento;
+        private System.Windows.Forms.TextBox txt_sexo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_eliminar;
+        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.TextBox txt_apellido;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txt_edad;
     }
 }
