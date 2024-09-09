@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
 [assembly: AssemblyProduct("CapaVista")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2023")]
+[assembly: AssemblyCopyright("Copyright © HP Inc. 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como id. de typelib si este proyecto se expone a COM.
-[assembly: Guid("69f14d39-3f26-4917-a4d5-63f1a185bcc6")]
+[assembly: Guid("6d7d46f0-6cbb-42c2-9fe5-eb5bc11a0f30")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
